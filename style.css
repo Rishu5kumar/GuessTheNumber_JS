@@ -1,0 +1,115 @@
+html {
+    font-family: sans-serif;
+}
+body {
+    background-color: gray;
+    color: white;
+    margin: 0 auto;
+    width: 300px;
+    max-width: 750px;
+    min-width: 480px;
+}
+#subt{
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 30px;
+    border-style: none; /*Removes the default border style*/
+    text-decoration: none; /*Ensures no underline or text decoration appears*/
+    margin-top: 20px;
+}
+#guessfield{
+    color: black;
+    width: 250px;
+    height: 50px;
+    font-size: 30px;
+    border-style: none;
+    margin-top: 25px;
+    border: 5px solid gray;
+    text-align: center;
+}
+#guess{
+    color: white;
+    font-size: 50px;
+    margin-top: 120px;
+}
+.guesses {
+    background-color: #7a7a7a;
+}
+#wrapper {
+    box-sizing: border-box; /*Ensures padding and border are included in the element’s total width and height*/
+    text-align: center;
+    width: 450px;
+    height: 550px;
+    background-color: #474747;
+    color: #fff;
+    font-size: 25px;
+}
+h1 {
+    background-color: #161616;  
+    color: #fff;
+    text-align: center;
+}
+p {
+    font-size: 16px;
+    text-align: center;
+}
+.lastResult {
+    color: white;
+    padding: 7px;
+}
+.guesses {
+    color: white;
+    padding: 7px;
+}
+
+/*
+Breakdown of width, min-width, and max-width:
+width: 300px;
+
+This sets the default width of the body to 300 pixels.
+min-width: 480px;
+
+This means that even if the screen or window is very small, the body will not shrink smaller than 480 pixels.
+If the screen is less than 480px wide (like a small phone), the body will ignore the width: 300px; setting and instead maintain a minimum width of 480px.
+max-width: 750px;
+
+This means that on larger screens, the body width can increase, but it will never grow beyond 750 pixels, even if the screen is much larger.
+How It Works Together:
+If the screen is less than 480px wide, the body will take a minimum width of 480px, despite the width: 300px rule.
+If the screen is between 480px and 750px wide, the body will adjust to exactly 300px, as per the width rule.
+If the screen is more than 750px wide, the body will grow but stop at 750px, and won't get any wider, even on very large screens.
+So, the width of 300px is a default or starting point, but it's overridden by min-width and max-width under certain conditions.
+
+
+The CSS rule margin: 0 auto; is used to center block-level elements horizontally within their container. Here's what it does:
+
+margin: 0 auto; means:
+0 refers to the top and bottom margins (in this case, no space above or below the element).
+auto refers to the left and right margins, meaning the browser will automatically calculate equal space on the left and right sides to center the element horizontally.
+*/
+
+/*
+Default Behavior (without box-sizing: border-box;):
+By default, browsers use the content-box model for box sizing:
+
+Width and height apply only to the content of the box, not including padding or borders.
+If you add padding or borders to an element, the total size (width + padding + border) increases, which can cause layout issues.
+For example, if you set width: 100px; and then add 10px of padding and 5px of border:
+
+The element’s actual width would become 100px (content) + 20px (padding) + 10px (border) = 130px.
+With box-sizing: border-box;:
+The width and height include the content, padding, and border.
+This ensures that the total size of the element stays as defined, making layouts easier to manage.
+For the same example with box-sizing: border-box; and width: 100px;:
+
+The element's total width stays 100px, including padding and border.
+So, the content will shrink to fit within the remaining space after accounting for the padding and border.
+Why Use It?
+Predictable Layout: It makes your layout predictable since the width and height include padding and borders.
+Prevents Overflow: Without box-sizing: border-box;, padding or borders might cause elements to overflow or disrupt the layout.
+Conclusion:
+Yes, your layout will "work" without box-sizing: border-box;, but using it makes your design more robust and easier to control, especially as you add padding and borders to elements. It’s a common best practice in modern CSS to include box-sizing: border-box for most layouts.
+*/
