@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess the number</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Number Guessing Game</h1>
+        <p>Try and guess a random number between 1 and 100.</p>
+        <p>You have 10 attempts to guess the right number.</p>
+        <br>
+        <form class="form">
+            <label for="guessfield" id="guess">Guess a number</label>
+            <input type="text" id="guessfield" class="guessfield">
+            <input type="submit" id="subt" value="Submit guess" class="guessSubmit">
+        </form>
+        <div class="resultParas">
+            <p>Previous Guesses:<span class="guesses"></span></p>
+            <p >Guesses Remaining: <span class="lastResult">10</span></p>
+            <p class="lowOrHi"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- <input type="submit"> and <button> are not exactly the same, although they can serve similar functions in a form. Let’s explore the differences between them.
+
+    1. Basic Differences:
+    <input type="submit">:
+    
+    This is an input element with a type of submit, and its primary purpose is to submit a form when clicked.
+    It doesn’t contain any inner HTML content, meaning you can't add icons, text, or additional elements inside it.
+    The text on the button is set using the value attribute, like this: <input type="submit" value="Submit">.
+    <button>:
+    
+    This is a more versatile element that can be used to submit a form, perform actions through JavaScript, or even act as a regular clickable button.
+    You can include any HTML content inside a <button>, such as text, icons, or images.
+    You can also specify its type using the type attribute (submit, button, or reset).
+    2. Attributes:
+    <input type="submit">:
+    
+    Limited to submitting the form when clicked.
+    The text displayed on the button is set using the value attribute: <input type="submit" value="Send">.
+    <button>:
+    
+    Can be used for more than just submitting a form. It can also be used to trigger JavaScript or as a reset button.
+    Can contain any HTML content: <button type="submit">Send <i class="icon"></i></button>.
+    You can specify the button’s purpose using the type attribute:
+    type="submit": Submits the form.
+    type="button": A regular button with no default form behavior (used for custom actions).
+    type="reset": Resets the form’s fields.
+    3. Usage Flexibility:
+    <input type="submit">:
+    
+    You cannot put extra content inside it (like icons or additional text).
+    Its functionality is fixed: it submits the form when clicked.
+    <button type="submit">:
+    
+    More flexible since you can add any HTML content, style it more freely, and use it for multiple purposes.
+    If the type is set to submit, it works exactly the same as <input type="submit">.
+    If the type is set to button, it acts as a custom button that doesn’t submit the form.
+    4. Styling and Content:
+    <input type="submit">:
+    
+    It's a self-contained, single element, so the only styling you can directly apply is to the input itself.
+    You cannot place other elements (like images or icons) inside it.
+    <button>:
+    
+    Since <button> can contain inner content (text, icons, etc.), you have much more control over its appearance and behavior.
+    You can easily style it and embed other elements inside the button for more complex designs.
+    5. Browser Defaults:
+    Both elements behave similarly across most browsers in terms of submitting forms. However, certain default styles may differ slightly between <input type="submit"> and <button>, which can be overridden with custom CSS.
+    Example Comparison:
+    <input type="submit">:
+    
+    html
+    Copy code
+    <form>
+        <input type="submit" value="Send">
+    </form>
+    <button type="submit">:
+    
+    html
+    Copy code
+    <form>
+        <button type="submit">Send <i class="icon"></i></button>
+    </form>
+    Summary:
+    <input type="submit"> is more limited: it can only submit a form and cannot contain inner HTML.
+    <button type="submit"> is more flexible: it can submit a form or be used for other actions, and it can include inner HTML (like text, icons, etc.).
+    In most cases, <button> is preferred for its flexibility, especially if you need to include more complex content or styles inside the button. However, <input type="submit"> is perfectly fine if you just need a simple form submission button without any extra content. 
+-->
